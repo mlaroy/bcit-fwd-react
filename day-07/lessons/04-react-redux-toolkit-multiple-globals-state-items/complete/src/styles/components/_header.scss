@@ -1,0 +1,47 @@
+// Header
+header {
+    background-color: $yellow;
+    padding: $section-padding;
+    display: flex;
+    gap: em(20);
+    align-items: center;
+    min-height: 84px;
+    h1 {
+        position: relative;
+        font-family: $logoFont;
+        font-size: em(20);
+        margin: 0 0 em(6, 30);
+        left: em(-3, 30);
+    }
+    h2 {
+        @include flatten;
+        font-size: em(10);
+    }
+    h1, h2 {
+        font-family: $logoFont;
+    }
+    .user {
+        text-align: right;
+    }
+
+    p {
+        margin-bottom: 8px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $dark;
+        display: block; 
+    }
+    @include mq(em(640)){
+        h1 {
+            font-size: em(30);
+            margin: 0 0 em(10, 30);
+        }
+        h2 {
+            @include flatten;
+            font-size: em(16);
+        }
+    }
+
+}

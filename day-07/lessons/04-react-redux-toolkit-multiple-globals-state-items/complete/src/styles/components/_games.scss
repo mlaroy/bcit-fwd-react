@@ -1,0 +1,51 @@
+
+.games-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: em(20);
+
+    .game {
+        border: 1px dashed #878787;
+        padding: em(16)
+    }
+
+    .game-info {
+        margin-bottom: em(16);
+    }
+
+    figure {
+        margin: 0 0 em(10);
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    p {
+        font-size: em(13);
+        margin-bottom: em(5, 13);
+    }
+
+    @include mq(em(640)){
+        
+        grid-template-columns: repeat(3, 1fr);
+
+        p {
+            font-size: em(12);
+            margin-bottom: em(5, 12);
+        }
+
+    }
+
+    @include mq(em(700)){
+
+        p {
+            font-size: em(14);
+            margin-bottom: em(5, 14);
+        }
+
+    }
+
+}

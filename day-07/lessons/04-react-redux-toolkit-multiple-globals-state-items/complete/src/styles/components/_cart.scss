@@ -1,0 +1,15 @@
+.cart-section {
+    ul {
+        padding: 0;
+        list-style-position: inside;
+    }
+    li {
+        margin-bottom: em(10);
+    }
+    .cart-item-grid-container {
+        display: inline-grid;
+        grid-template-columns: em(150) em(130) auto auto;
+        column-gap: em(10);
+    }
+
+}

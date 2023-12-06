@@ -1,0 +1,25 @@
+.cart-icon-container {
+    
+    position: relative;
+    margin-left: auto;
+
+    .cart-icon {
+        font-size: em(54);
+    }
+
+    .cart-counter {
+        position: absolute;
+        bottom: em(5);
+        right: 0;
+        display: block;
+        background-color: rebeccapurple;
+        color: white;
+        width: em(28);
+        height: em(28);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+}
