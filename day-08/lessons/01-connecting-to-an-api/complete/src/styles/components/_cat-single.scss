@@ -1,0 +1,53 @@
+// Cat Single
+.cat-photo-section {
+  h2 {
+    margin-bottom: em(10,24);
+  }
+}
+
+.cat-container {
+  @include mq(em(600)){
+    display: grid;
+    grid-template-columns: em(200) 1fr;
+  }
+}
+
+.get-cat-form {
+
+  margin-bottom: em(20);
+
+  label,
+  select,
+  button {
+    display: block;
+    width: em(190)
+  }
+
+  label {
+    margin-bottom: em(10);
+  }
+
+  .input-group {
+    margin-bottom: em(20);
+  }
+ 
+}
+
+.cat-image {
+  margin-bottom: em(20);
+  height: 270px;
+  margin-bottom: em(20);
+  
+  img {
+    display: block;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &.cat-image-about-page {
+    img {
+      border-radius: em(20)
+    }
+  }
+
+}

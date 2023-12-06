@@ -1,0 +1,56 @@
+// Kittens Grid
+
+.cat-grid {
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: em(20);
+  margin-bottom: em(20);
+
+  .cat {
+    position: relative;
+    display: grid;
+    grid-template-columns: em(140) 1fr;
+    padding: em(10);
+    border: em(1) dotted #ccc;
+    background-color: #fff;
+    box-shadow: em(2) em(3) em(5) em(2) #e1e1e1;
+    border-radius: em(10);
+    p {
+      margin: 0 0 em(5);
+    }
+  }
+
+  .heart {
+    position: absolute;
+    top: em(8);
+    right: em(8);
+    width: em(30);
+  }
+
+  .profile-picture {
+    grid-column: 1;
+    grid-row: 1 / 5;
+    margin-right: em(10);
+    img {
+      border-radius: em(10);
+    }
+  }
+
+  .link-profile {
+    margin-bottom: em(16);
+  }
+
+  @include mq(em(690)){
+
+    grid-template-columns: 1fr 1fr;
+
+    .cat {
+      padding: em(10);
+    }
+
+  }
+
+}
+
+
