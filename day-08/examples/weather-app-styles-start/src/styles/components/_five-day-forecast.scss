@@ -1,0 +1,83 @@
+// Five Day Forecast
+
+.five-day-forecast-home-page {
+    margin-bottom: em(10);
+}
+
+.five-day-weather-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: em(16);
+    .day {
+        text-align: center;
+        padding: em(10);
+        border: 1px solid $light;
+        border-radius: 6px;
+        .date {
+            margin-bottom: em(8);
+        }
+        .temps {
+            font-size: em(42);
+        }
+        &:nth-child(5){
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            figure {
+                grid-column: 1 / 2;
+                grid-row: span 2;
+            }
+            .date {
+                grid-column: 2 / 3;
+                grid-row: 1;
+                align-self: end;
+            }
+            .temps {
+                grid-column: 2 / 3;
+                grid-row: 2;
+            }
+        }
+    }
+    figure {
+        margin: 0;
+    }
+    @include mq(em(460)){
+        grid-template-columns: repeat(6, 1fr);
+        .day {
+            &:nth-child(1),
+            &:nth-child(2){
+                grid-column: span 3;
+            }
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+                grid-column: span 2;
+            }
+            &:nth-child(5) {
+                display: block;
+            }
+        }
+    }
+    @include mq(em(600)){
+        grid-template-columns: repeat(5, 1fr);
+        .day {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+                grid-column: span 1;
+            }
+            .date {
+                font-size: 0.85em;
+            }
+        }   
+    }
+    @include mq(em(670)){
+        .day {
+            .date {
+                font-size: 1em;
+            }
+        }   
+    }
+}

@@ -1,0 +1,21 @@
+// Manage Cities
+
+.cities-list {
+    ol {
+        padding-left: em(16);
+    }
+    li {
+        margin-bottom: em(16);
+    }
+    .city-location{
+        margin-bottom: em(8);
+    }
+    @include mq(em(600)){
+        .city-container {
+            display: flex;
+        }
+        .city-location {
+            margin-right: em(10);
+        }
+    }
+}

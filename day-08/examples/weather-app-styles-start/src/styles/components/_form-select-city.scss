@@ -1,0 +1,55 @@
+// Form Select City
+
+.form-select-city {
+    margin-bottom: em(30);
+    .input-group:not(:last-child){
+        margin-bottom: em(16);
+    }
+
+    label {
+        display: inline-block;
+        width: 72px;
+    }
+
+    .input-submit-group {
+        display: flex;
+        p {
+            margin: 0 0 0 em(8);
+        }
+    }
+
+    @include mq(em(480)){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1em;
+        //grid-row-gap: 0.5em;
+
+        label {
+            width: auto;
+            margin-right: em(8);
+        }
+
+        .input-group {
+            margin-bottom: 0;
+            display: flex;
+            input:not([type="submit"]), select {
+                flex: 1;
+            }
+        }
+        .input-submit-group {
+            grid-row: 3;
+        }
+    }
+
+    @include mq(em(700)){
+        grid-template-columns: 1fr 1fr 1fr;
+        .input-submit-group {
+            grid-row: 2;
+        }
+        label {
+            width: auto;
+            margin-right: 0.5em;
+        }
+    }
+
+}

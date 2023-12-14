@@ -1,0 +1,28 @@
+// Header
+
+header {
+    background-color: $lightBlue;
+    
+    h1 {
+        @include flatten;    
+    }
+    
+    a {
+        text-decoration: none;
+        color: $light;
+    }
+
+    .header-row-01 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: em(16);
+    }
+
+    @include mq(em(600)){
+        .header-row-01 {
+            padding: em(20);
+        }
+    }
+
+}

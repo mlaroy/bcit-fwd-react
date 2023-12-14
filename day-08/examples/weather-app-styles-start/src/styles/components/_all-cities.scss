@@ -1,0 +1,93 @@
+// All Cities
+
+.all-cities-grid {
+
+    @mixin horizontal-city {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        figure {
+            grid-column: 1 / 2;
+            grid-row: span 2;
+        }
+        .city-name {
+            grid-column: 2 / 3;
+            grid-row: 1;
+            align-self: end;
+        }
+        .temps {
+            grid-column: 2 / 3;
+            grid-row: 2;
+        }
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: em(16);
+
+    .city {
+        text-align: center;
+        padding: em(10);
+        border: 1px solid $light;
+        border-radius: 6px;
+        h4 {
+           margin-bottom: 10px; 
+        }
+        .temp {
+            font-size: 3em;
+        }
+        &:only-child {
+            grid-column: span 2;
+            @include horizontal-city;
+        }
+        &:nth-child(3):last-child {
+            grid-column: span 2;
+            @include horizontal-city;
+        }
+        &:nth-child(5){
+            grid-column: span 2;
+            @include horizontal-city;
+        }
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    @include mq(em(460)){
+        grid-template-columns: repeat(6, 1fr);
+        .city {
+            grid-column: span 3;
+            @include horizontal-city;
+            &:only-child {
+                grid-column: span 3;
+            }
+            &:nth-child(3):last-child {
+                grid-column: span 3;
+            }
+            &:nth-child(5) {
+                grid-column: span 3;
+            }
+        }
+    }
+    /*
+    @include mq(em(600)){
+        grid-template-columns: repeat(5, 1fr);
+        .city {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(3):last-child,
+            &:nth-child(4),
+            &:nth-child(5) {
+                display:block;
+                grid-column: span 1;
+            }
+            &:only-child {
+                grid-column: span 2;
+                @include horizontal-city;
+            }
+        }   
+    }
+    */
+    
+}
