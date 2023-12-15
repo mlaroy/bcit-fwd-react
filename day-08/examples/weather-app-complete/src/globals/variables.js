@@ -7,7 +7,7 @@
 // being locked out accidentally by making too many calls
 // to the API
 // const OW_API_KEY_ONLY = '000';
-export const OW_API_KEY_ONLY = '226e40cf0b6b7a57ede4b27eaa8b180d';
+export const OW_API_KEY_ONLY = 'replace-this-string-with-your-api-key';
 export const OW_API_KEY = `&appid=${OW_API_KEY_ONLY}`;
 export const OW_BASE_URL = `https://api.openweathermap.org/data/2.5/onecall?`;
 export const OW_API_DATA_MODE = '&mode=json';
