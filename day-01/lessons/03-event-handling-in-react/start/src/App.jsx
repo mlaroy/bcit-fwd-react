@@ -1,6 +1,8 @@
 import "./App.css"
 
 /**
+ * Events in React
+ * 
  * Create add, subtract, and reset functions that console.log a message
  * when they are clicked.
  */

@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   value: 0,
+  clicks: 0,
 }
 
 export const counterSlice = createSlice({
@@ -14,12 +15,15 @@ export const counterSlice = createSlice({
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
       state.value += 1
+      state.clicks += 1
     },
     decrement: (state) => {
       state.value -= 1
+      state.clicks += 1
     },
     incrementByAmount: (state, action) => {
       state.value += action.payload
+      state.clicks += 1
     },
   },
 });

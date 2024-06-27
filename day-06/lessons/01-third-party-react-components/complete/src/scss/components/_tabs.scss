@@ -9,13 +9,13 @@
 .react-tabs {
     border: 1px solid black;
     padding: em(6);
-} 
+}
 
 // Custom React Tab Panel Styles
 .react-tabs__tab-panel {
 
     padding: em(20);
-   
+
     .tab-panel-content-overview {
         display: flex;
         align-items: flex-start;
@@ -30,7 +30,7 @@
 
     .tab-panel-content-specs {
         table, th, td, tr {
-           border: 1px solid black; 
+           border: 1px solid black;
         }
 
         th, td {
@@ -52,7 +52,7 @@
     }
 
     .tab-panel-content-reviews {
-        
+
         .review {
             border-top: 1px dotted $dark;
             border-bottom: 1px dotted $dark;
@@ -78,7 +78,7 @@
         }
 
         h3 {
-           margin-bottom: em(10, 18.72); 
+           margin-bottom: em(10, 18.72);
         }
 
         .author {
@@ -93,5 +93,11 @@
         }
 
     }
-    
+
+}
+
+.react-tabs__tab-list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
 }

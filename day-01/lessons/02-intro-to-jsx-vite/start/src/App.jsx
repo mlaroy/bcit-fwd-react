@@ -4,7 +4,7 @@ import viteLogo from "/vite.svg"
 import "./App.css"
 
 /**
- * Declare a function that receices an array of things to do,
+ * Declare a function that receives an array of things to do,
  * and conditionally renders "nothing to do" if the array is empty,
  * An unordered list of all items if there are 3 or less items,
  * An unordered list of all items if there are more than 3 items,
