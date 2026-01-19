@@ -1,0 +1,40 @@
+:root {
+    --bg: #fafafa;
+    --text: #242424;
+}
+
+.dark {
+    --text: #fafafa;
+    --bg: #242424;
+}
+
+.wrapper {
+    color: #242424;
+    background: white;
+    height: 100vh;
+    padding: 2rem 0;
+}
+
+.container {
+    padding: 0 2rem;
+}
+
+.toggle-button {
+    color: #fafafa;
+    background: #242424;
+    margin-bottom: 2rem;
+}
+
+.dark .toggle-button {
+    background: #fafafa;
+    color: #242424;
+}
+
+.wrapper.dark {
+    background-color: #242424;
+    color: white;
+}
+
+h2 {
+    margin-top: 0px;
+}
