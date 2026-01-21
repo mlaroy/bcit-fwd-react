@@ -1,0 +1,8 @@
+{
+  "name": "02-file-system",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  }
+}

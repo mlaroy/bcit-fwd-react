@@ -1,0 +1,5 @@
+{
+  "course": "Intro to Node",
+  "topics": ["node runtime", "npm scripts", "fs module"],
+  "students": 18
+}
